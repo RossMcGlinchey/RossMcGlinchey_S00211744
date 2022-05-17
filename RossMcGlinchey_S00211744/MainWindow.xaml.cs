@@ -38,5 +38,17 @@ namespace RossMcGlinchey_S00211744
 
             lbxLocations.ItemsSource = allProperties;
         }
+
+        private void lbxLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Determine what has been selected
+            RentalProperty selected = lbxLocations.SelectedItem as RentalProperty;
+
+            //Ensure it is not null
+            if (selected != null)
+            {
+                tblkDescription.Text = selected.Description;
+            }
+        }
     }
 }

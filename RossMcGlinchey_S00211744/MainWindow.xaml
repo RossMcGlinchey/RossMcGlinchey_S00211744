@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbxLocations" HorizontalAlignment="Left" Height="270" Margin="61,69,0,0" VerticalAlignment="Top" Width="295"/>
+        <ListBox x:Name="lbxLocations" HorizontalAlignment="Left" Height="270" Margin="61,69,0,0" VerticalAlignment="Top" Width="295" SelectionChanged="lbxLocations_SelectionChanged"/>
         <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Height="186" Margin="379,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
         <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="697,146,0,0"/>
 

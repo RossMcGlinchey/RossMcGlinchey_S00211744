@@ -52,7 +52,7 @@ namespace DataManagement
                 db.Properties.Add(p3);
 
                 db.SaveChanges();
-                Console.WriteLine("Data has been saved to database");
+                Console.WriteLine("Data has been saved to database, press enter to continue.");
 
                 Console.ReadLine();
             }
