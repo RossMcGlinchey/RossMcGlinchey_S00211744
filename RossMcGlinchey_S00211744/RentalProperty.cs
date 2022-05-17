@@ -25,6 +25,7 @@ namespace RossMcGlinchey_S00211744
             Price = Price + (Price * percentIncrease / 100);
         }
 
+        //returns Location for the XAML
         public override string ToString()
         {
             return Location;
@@ -33,6 +34,7 @@ namespace RossMcGlinchey_S00211744
 
     public class RentalData:DbContext
     {
+        //Creates database under the name typed below
         public RentalData() : base("MyRentalData") { }
 
         public DbSet<RentalProperty> Properties { get; set; }

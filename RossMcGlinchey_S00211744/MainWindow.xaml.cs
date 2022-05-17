@@ -28,14 +28,18 @@ namespace RossMcGlinchey_S00211744
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //allows interaction with the database
             RentalData db = new RentalData();
 
+            //query to show properties in order of their price, lowest to highest
             var query = from p in db.Properties
                         orderby p.Price ascending
                         select p;
 
+            //adds all data from the query list to this variable
             allProperties = query.ToList();
 
+            //Displays the query data in the listbox
             lbxLocations.ItemsSource = allProperties;
         }
 
@@ -47,6 +51,7 @@ namespace RossMcGlinchey_S00211744
             //Ensure it is not null
             if (selected != null)
             {
+                //Update textblock with relevant description
                 tblkDescription.Text = selected.Description;
             }
         }

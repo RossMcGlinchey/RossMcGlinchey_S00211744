@@ -11,8 +11,10 @@ namespace DataManagement
     {
         static void Main(string[] args)
         {
+            //enables interaction with database
             RentalData db = new RentalData();
 
+            //Constructor data
             using (db)
             {
                 RentalProperty p1 = new RentalProperty()
@@ -47,10 +49,12 @@ namespace DataManagement
                 };
 
                 Console.WriteLine("Properties have been created");
+                //Add Properties to database
                 db.Properties.Add(p1);
                 db.Properties.Add(p2);
                 db.Properties.Add(p3);
 
+                //Save database changes
                 db.SaveChanges();
                 Console.WriteLine("Data has been saved to database, press enter to continue.");
 
