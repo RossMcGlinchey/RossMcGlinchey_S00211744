@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,5 +24,12 @@ namespace RossMcGlinchey_S00211744
         {
             Price = Price + (Price * percentIncrease / 100);
         }
+    } //End of RentalProperty class
+
+    public class RentalData:DbContext
+    {
+        public RentalData() : base("MyRentalData") { }
+
+        public DbSet<RentalProperty> Properties { get; set; }
     }
 }
