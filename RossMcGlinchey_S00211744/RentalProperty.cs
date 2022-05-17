@@ -24,6 +24,11 @@ namespace RossMcGlinchey_S00211744
         {
             Price = Price + (Price * percentIncrease / 100);
         }
+
+        public override string ToString()
+        {
+            return Location;
+        }
     } //End of RentalProperty class
 
     public class RentalData:DbContext

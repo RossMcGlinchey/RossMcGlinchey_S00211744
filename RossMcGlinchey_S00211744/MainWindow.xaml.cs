@@ -20,9 +20,23 @@ namespace RossMcGlinchey_S00211744
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<RentalProperty> allProperties;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            RentalData db = new RentalData();
+
+            var query = from p in db.Properties
+                        orderby p.Price ascending
+                        select p;
+
+            allProperties = query.ToList();
+
+            lbxLocations.ItemsSource = allProperties;
         }
     }
 }
