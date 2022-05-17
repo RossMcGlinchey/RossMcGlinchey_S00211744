@@ -55,5 +55,16 @@ namespace RossMcGlinchey_S00211744
                 tblkDescription.Text = selected.Description;
             }
         }
+
+        //Create Second Window to add entries to database
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //When button is clicked, this new window is opened
+            DataEntryWindow newWindow = new DataEntryWindow();
+
+            //Allows the data to be interacted with in new window
+            newWindow.Owner = this;
+            newWindow.ShowDialog();
+        }
     }
 }
