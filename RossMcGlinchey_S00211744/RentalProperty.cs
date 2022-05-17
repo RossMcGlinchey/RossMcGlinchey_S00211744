@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RossMcGlinchey_S00211744
 {
-    class RentalProperty
+    public class RentalProperty
     {
         //Properties
         public int ID { get; set; }
